@@ -13,16 +13,17 @@ $(function(){
 
   // 2 creo ciclo per inserire ogni indice dell'array nel template
 
-  for( var i = 0; i < addList.length; i++){
+  // for( var i = 0; i < addList.length; i++){
+  //
+  //   // 3 creo un clone del template
+  //
+  //   template.prepend(addList[i]);
+  //
+  //   $(".to-do-list").append(template);
+  //
+  // }
 
-    // 3 creo un clone del template
-    var template = $(".template ul li").clone();
 
-    template.prepend(addList[i]);
-
-    $(".to-do-list").append(template);
-
-  }
 
   $(".delete").click(function(){
 
@@ -35,7 +36,11 @@ $(function(){
 
       var textUtente = $(this).val();
 
-      console.log(textUtente);
+      var template = $(".template ul li").clone();
+
+      template.prepend(textUtente);
+
+      $(".to-do-list").append(template);
     }
 
   });
