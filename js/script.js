@@ -1,7 +1,7 @@
 $(function(){
 
-  // 1 creo oggetto con lista di cose da comprare
-  var addList = {
+  // 1 creo array con lista di cose da comprare
+  var addList = [
 
     "Comprare il pane",
 
@@ -9,13 +9,15 @@ $(function(){
 
     "Comprare verdura"
 
-  }
+  ]
+
 
   // 2 creo un clone del template
-  
+
   var template = $(".template ul li").clone();
 
 
+  template.prepend(addList.)
 
 
 
