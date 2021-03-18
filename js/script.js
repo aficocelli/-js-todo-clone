@@ -11,12 +11,12 @@ $(function(){
 
   ];
 
+  // 2 creo ciclo per inserire ogni indice dell'array nel template
 
-  // 2 creo un clone del template
   for( var i = 0; i < addList.length; i++){
 
+    // 3 creo un clone del template
     var template = $(".template ul li").clone();
-
 
     template.prepend(addList[i]);
 
@@ -24,5 +24,9 @@ $(function(){
 
   }
 
+  $(".delete").click(function(){
+
+    $(this).parent().remove();
+  })
 
 });
