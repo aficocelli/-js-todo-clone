@@ -29,4 +29,17 @@ $(function(){
     $(this).parent().remove();
   })
 
+  $("#add-list").keydown(function(e){
+
+    if(e.which == 13){
+
+      var textUtente = $(this).val();
+
+      console.log(textUtente);
+    }
+
+  });
+
+
+
 });
