@@ -24,25 +24,26 @@ $(function(){
   // }
 
 
-
-  $(".delete").click(function(){
-
-    $(this).parent().remove();
-  })
-
   $("#add-list").keydown(function(e){
 
-    if(e.which == 13){
+    var textUtente = $(this).val();
 
-      var textUtente = $(this).val();
+    if(e.which == 13 && $(this).val() != ""){
 
       var template = $(".template ul li").clone();
 
       template.prepend(textUtente);
 
       $(".to-do-list").append(template);
+
+      $(this).val("");
     }
 
+  });
+
+  $(".to-do-list").on("click", ".delete", function(){
+
+    $(this).parent().remove();
   });
 
 
