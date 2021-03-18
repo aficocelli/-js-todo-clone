@@ -17,7 +17,7 @@ $(function(){
 
     // 3 creo un clone del template
     var template = $(".template ul li").clone();
-    
+
     template.prepend(addList[i]);
 
     $(".to-do-list").append(template);
@@ -43,9 +43,12 @@ $(function(){
 
   });
 
+  // 5 al click sulla x rimuovo l'elemento
+
   $(".to-do-list").on("click", ".delete", function(){
 
     $(this).parent().remove();
+
   });
 
 
