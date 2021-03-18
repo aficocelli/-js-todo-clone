@@ -1,4 +1,31 @@
-
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.container{
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  height:100vh;
+}
+.to-do-list{
+  list-style-type: none;
+  margin-bottom:20px;
+}
+.delete{
+  display:inline-block;
+  text-align: center;
+  margin-left:10px;
+  border:1px solid #fff;
+  height:20px;
+  width:20px;
+  border-radius:20px;
+  color:#fff;
+  background-color: red;
+  cursor: pointer;
+}
 .template{
   display:none;
 }
