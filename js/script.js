@@ -13,16 +13,18 @@ $(function(){
 
   // 2 creo ciclo per inserire ogni indice dell'array nel template
 
-  // for( var i = 0; i < addList.length; i++){
-  //
-  //   // 3 creo un clone del template
-  //
-  //   template.prepend(addList[i]);
-  //
-  //   $(".to-do-list").append(template);
-  //
-  // }
+  for( var i = 0; i < addList.length; i++){
 
+    // 3 creo un clone del template
+    var template = $(".template ul li").clone();
+    
+    template.prepend(addList[i]);
+
+    $(".to-do-list").append(template);
+
+  }
+
+  // 4 al click di invio sull'input aggiungo in lista
 
   $("#add-list").keydown(function(e){
 
