@@ -9,19 +9,20 @@ $(function(){
 
     "Comprare verdura"
 
-  ]
+  ];
 
 
   // 2 creo un clone del template
+  for( var i = 0; i < addList.length; i++){
 
-  var template = $(".template ul li").clone();
-
-
-  template.prepend(addList[0]);
-
-  $(".to-do-list").append(template);
+    var template = $(".template ul li").clone();
 
 
+    template.prepend(addList[i]);
+
+    $(".to-do-list").append(template);
+
+  }
 
 
-  });
+});
