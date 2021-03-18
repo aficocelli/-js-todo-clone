@@ -17,9 +17,9 @@ $(function(){
   var template = $(".template ul li").clone();
 
 
-  template.prepend(addList.)
+  template.prepend(addList[0]);
 
-
+  $(".to-do-list").append(template);
 
 
 
